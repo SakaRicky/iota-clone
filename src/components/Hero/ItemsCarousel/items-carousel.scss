@@ -1,0 +1,136 @@
+@use "scss/abstracts" as *;
+
+.slider-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	font-family: "Inter";
+
+	.slider {
+		height: 40vh;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include breakpoints-up(large) {
+			display: none;
+		}
+
+		.slider__btn {
+			cursor: pointer;
+			width: 5rem;
+
+			svg {
+				width: 1.5em;
+				// height: 2e;
+				color: $white;
+			}
+		}
+
+		a {
+			color: $white;
+			width: 13rem;
+
+			.itemslide {
+				height: 100%;
+				margin: 0 auto;
+
+				&__image {
+					// width: 80%;
+					// height: 20%;
+					object-fit: cover;
+				}
+
+				&__text {
+					margin: 1rem 0;
+					text-align: left;
+					// letter-spacing: 1.5px;
+				}
+			}
+
+			&:hover {
+				h5,
+				p {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	h6 {
+		color: $darkBlue;
+		font-size: 0.9rem;
+		margin-bottom: 0.5rem;
+		font-weight: 400;
+	}
+
+	h5 {
+		font-size: 1rem;
+		margin-bottom: 1rem;
+	}
+	p {
+		font-size: 0.9rem;
+		line-height: 1.5rem;
+	}
+
+	.items {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 1rem;
+		text-align: left;
+		gap: 3rem;
+
+		@include breakpoints-down(medium) {
+			display: none;
+		}
+
+		a {
+			color: $white;
+			flex: 1;
+			// width: 30%;
+
+			&:hover {
+				h5,
+				p {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		// h6 {
+		// 	font-size: 0.5rem;
+		// 	margin-bottom: 0.3rem;
+		// 	font-weight: 400;
+		// }
+
+		// h5 {
+		// 	font-size: 0.5rem;
+		// 	margin-bottom: 0.8rem;
+		// }
+		// p {
+		// 	font-size: 0.5rem;
+		// 	line-height: 1.2rem;
+		// }
+
+		.item-no-image {
+			flex: 1;
+		}
+
+		&__card {
+			display: flex;
+			align-items: center;
+			gap: 1.5rem;
+			flex: 2;
+		}
+
+		&__image {
+		}
+
+		img {
+			max-height: 100px;
+			width: 150px;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}

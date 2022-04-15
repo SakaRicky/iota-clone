@@ -1,0 +1,44 @@
+@font-face {
+	font-family: "Metropolis Regular";
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+	src: url("./metropolis/Metropolis-Regular.otf") format("woff2"),
+		url("./metropolis/Metropolis-Regular.otf") format("woff");
+}
+
+@font-face {
+	font-family: "Metropolis Light";
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+	src: url("./metropolis/Metropolis-Thin.otf") format("woff2"),
+		url("./metropolis/Metropolis-Thin.otf") format("woff");
+}
+
+@font-face {
+	font-family: "Metropolis Medium";
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+	src: url("./metropolis/Metropolis-Medium.otf") format("woff2"),
+		url("./metropolis/Metropolis-Medium.otf") format("woff");
+}
+
+@font-face {
+	font-family: "Metropolis Semi Bold";
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+	src: url("./metropolis/Metropolis-SemiBold.otf") format("woff2"),
+		url("./metropolis/Metropolis-SemiBold.otf") format("woff");
+}
+
+@font-face {
+	font-family: "Metropolis Bold";
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+	src: url("./metropolis/Metropolis-Bold.otf") format("woff2"),
+		url("./metropolis/Metropolis-Bold.otf") format("woff");
+}

@@ -1,0 +1,101 @@
+@use "scss/abstracts" as *;
+
+header {
+	font-family: "Inter";
+	background-color: rgba(255, 255, 255, 0.05);
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include breakpoints-down(large) {
+			margin: 0 5rem;
+		}
+		@include breakpoints-down(medium) {
+			margin: 0 1rem;
+		}
+
+		.logo {
+			display: flex;
+			.logo-text {
+				margin-left: 1rem;
+
+				@include breakpoints-down(large) {
+					display: none;
+				}
+			}
+		}
+
+		nav {
+			display: flex;
+			align-items: center;
+
+			@include breakpoints-down(medium) {
+				display: none;
+			}
+
+			a {
+				color: $white;
+				display: inline-block;
+				padding: 1rem;
+				position: relative;
+
+				&::after {
+					content: "";
+					display: block;
+					width: 0;
+					height: 5px;
+					background-color: $aquaGreen;
+					position: absolute;
+					top: 3rem;
+					transition: all 300ms ease-in-out;
+				}
+
+				&:last-child::after {
+					display: none;
+				}
+
+				&:hover {
+					&::after {
+						width: 70%;
+					}
+				}
+
+				img {
+					width: 20%;
+				}
+			}
+
+			.explore-link {
+				display: flex;
+				gap: 0.5rem;
+				align-items: center;
+				background-color: $lightDarkBlue;
+
+				&:hover {
+					background-color: $veryDarkBlue;
+				}
+			}
+		}
+
+		.menu-button {
+			cursor: pointer;
+
+			@include breakpoints-up(large) {
+				display: none;
+			}
+
+			> span {
+				width: 25px;
+				height: 3px;
+				background-color: $white;
+				margin: 4px 0;
+				display: block;
+			}
+		}
+	}
+}
