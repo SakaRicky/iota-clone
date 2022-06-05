@@ -12,6 +12,7 @@ export const Hero = () => {
 	// const intervalTime = 5000;
 	let slideInterval;
 
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	const autoSlide = () => {
 		slideInterval = setInterval(() => {
 			nextSlide();
@@ -21,7 +22,7 @@ export const Hero = () => {
 	useEffect(() => {
 		autoSlide();
 		return () => clearInterval(slideInterval);
-	}, [slidesState]);
+	}, [autoSlide, slideInterval, slidesState]);
 
 	const nextSlide = () => {
 		slidesState === 2 ? setSlidesState(0) : setSlidesState(slidesState + 1);
